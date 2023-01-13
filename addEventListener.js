@@ -12,4 +12,16 @@ btn.addEventListener("click", function (event){///0
 
 }) // end
 
-// Wh
+heading.addEventListener("mouseenter",function(event){
+    heading.style.color="brown";
+
+})
+
+heading.addEventListener("mouseleave",function(event){
+    heading.style.color="black";
+
+})
+
+
+
+// you have to change the color of heading element using mouseover event

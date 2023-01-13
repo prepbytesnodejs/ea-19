@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <div style="border: 1px solid black; width: 500px;;height: 500px; text-align: center;">
+
+        <input type="text"  style="margin-top: 20px;" id="input1"/> <br>
+        <input type="text"  style="margin-top: 20px;" id="input2" /><br>
+
+        <input type="text"  style="margin-top: 20px;" id="output" readonly/><br>
+
+        <button id="add">
+            Add
+        </button><br>
+
+        <button id="subtract">
+           Subtract
+        </button>
+
+
+
+    </div>
+
+    <script>
+        let input1=document.getElementById("input1");
+        let input2=document.getElementById("input2");
+        let add=document.getElementById("add");
+
+        let subtract=document.getElementById("subtract");
+        let output=document.getElementById("output");
+
+        add.addEventListener("click",function(){
+            let value1=parseInt(input1.value);
+            let value2=parseInt(input2.value);
+
+            output.value=value1+value2
+
+            // parseInt 
+
+          
+           // console.log();
+
+
+        })
+
+        subtract.addEventListener("click",function(){
+            let value1=parseInt(input1.value);
+            let value2=parseInt(input2.value);
+            output.value=value1-value2
+
+            //console.log(value1-value2);
+
+            
+
+})
+
+
+
+ </script>
+    
+</body>
+</html>
