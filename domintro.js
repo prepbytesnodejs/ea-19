@@ -8,7 +8,7 @@
 //Getting elements by id  from th edom object
 //document.getElementById
 
-const heading=document.getElementById("heading");
+const heading=document.getElementById("heading")
 //console.log(heading);  // this object will contain all the css properties all the text properties and you can manipulate them
 
 //heading.style.color="green";
@@ -20,3 +20,15 @@ document.getElementById("btn").addEventListener("click",function(){
 heading.innerText="Something else"
 })
 */
+
+// You have to change the  fontsize ,fontfamily ,give a border to the text when clicking on the button
+
+//
+
+const btn=document.getElementById("btn");
+
+btn.addEventListener("click",function(){
+
+    heading.style.fontSize="100px";
+    heading.style.fontFamily="cursive"
+})
