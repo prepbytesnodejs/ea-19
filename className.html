@@ -7,11 +7,11 @@
     <title>Document</title>
 </head>
 <body>
-    <h1 class="heading">Hello</h1>
+    <p class="heading">Hello</p>
 
-    <h1 class="heading">World</h1>
+    <p class="heading">World</p>
 
-    <h1 class="heading">People</h1>
+    <p class="heading">People</p>
 
     <button id="btn">
         Change Color
@@ -20,7 +20,10 @@
 
     <script>
 
-let headingElements=document.getElementsByClassName("heading");
+// getElementsByClassName and getElementsByTagName both returns collection elements
+//let headingElements=document.getElementsByClassName("heading");
+
+let headingElements=document.getElementsByTagName("p");
 let btn=document.getElementById("btn");
 
 //headingElements.addEventListener("")  // wont work
