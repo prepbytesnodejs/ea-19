@@ -21,7 +21,15 @@
 
         <button id="subtract">
            Subtract
-        </button>
+        </button><br>
+
+        <button id="multiply">
+            Multiply
+         </button><br>
+
+         <button id="divide">
+            Divide
+         </button>
 
 
 
@@ -31,6 +39,10 @@
         let input1=document.getElementById("input1");
         let input2=document.getElementById("input2");
         let add=document.getElementById("add");
+        let multiply=document.getElementById("multiply");
+        let divide=document.getElementById("divide");
+
+
 
         let subtract=document.getElementById("subtract");
         let output=document.getElementById("output");
@@ -40,6 +52,33 @@
             let value2=parseInt(input2.value);
 
             output.value=value1+value2
+
+            // parseInt 
+
+          
+           // console.log();
+
+
+        })
+        multiply.addEventListener("click",function(){
+            let value1=parseInt(input1.value);
+            let value2=parseInt(input2.value);
+
+            output.value=value1*value2
+
+            // parseInt 
+
+          
+           // console.log();
+
+
+        })
+
+        divide.addEventListener("click",function(){
+            let value1=parseInt(input1.value);
+            let value2=parseInt(input2.value);
+
+            output.value=value1/value2
 
             // parseInt 
 
