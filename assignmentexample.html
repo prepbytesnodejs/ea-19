@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <title>Document</title>
+</head>
+<body>
+
+    <button  class="btn btn-success" id="btn" onclick="AddElement()">
+        Add Box
+
+
+    </button>
+
+
+    <div class="row" id="row">
+
+    </div>
+
+    <script>
+        const row=document.getElementById("row");
+
+        function addInternalData(element){
+            console.log(element);
+
+        }
+
+        function dynamicId(){
+            const did=`id-${+ new Date()}`
+            return did;
+        }
+
+        function AddElement(){
+      
+            let cols=document.createElement("div");
+            // Creating dynamic ids
+            cols.className="col-3 offset-1"
+            let id=dynamicId();
+            cols.id=id;
+            cols.style.marginTop="20px";
+            cols.style.height="300px";
+            cols.style.border="1px solid black";
+            cols.innerHTML=` <button  onclick='addInternalData(this)' data-parentId=${id}  class='btn btn-info'>Add Data</button> <button class='btn btn-danger'>Delete</button>  `
+            row.appendChild(cols);
+
+
+        }
+
+        /*
+        let btn=document.getElementById("btn");
+        btn.addEventListener("click",function(){
+            console.log("hello")
+        })
+        
+        */
+    </script>
+    
+</body>
+</html>
