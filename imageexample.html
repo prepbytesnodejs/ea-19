@@ -17,6 +17,8 @@
                 Add ToDo
             </button>
 
+        
+
         </div>
 
     </div>
@@ -45,15 +47,11 @@
         btn.addEventListener("click",function(){
             let value=input.value;
           // Creating li elements
-            const li=document.createElement("li");
+            const img=document.createElement("img");
 
-            //li.innerText=value;
-           // li.innerHTML=value+" <button class='btn btn-danger'> Delete </button>"
-           li.innerHTML=`${value}  <button class='btn btn-danger'> Delete </button>` // template literals way
-            li.className="list-group-item"
+            img.src=`https://api.placid.app/u/qsraj?title[text]=${value}`
 
-            list.appendChild(li);
-
+            list.appendChild(img)
          
          
 
