@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Document</title>
+</head>
+<body>
+
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Age</th>
+            <th scope="col">Name</th>
+            <th scope="col">Address</th>
+          </tr>
+        </thead>
+        <tbody id="tbody">
+         
+        </tbody>
+      </table>
+
+
+    <script>
+
+   let data=[
+  {
+    "_id": "63c6ab94fa5783527091a166",
+    "age": 39,
+    "name": "Wynn Goodman",
+    "address": "657 Doone Court, Coultervillle, Illinois, 7752"
+  },
+  {
+    "_id": "63c6ab949912d480bdb61c4a",
+    "age": 84,
+    "name": "Bryant Daugherty",
+    "address": "786 Hamilton Walk, Ruffin, North Dakota, 3260"
+  },
+  {
+    "_id": "63c6ab9425856e6fbac37a2e",
+    "age": 70,
+    "name": "Wilson Salas",
+    "address": "412 Oakland Place, Wyoming, Massachusetts, 4729"
+  },
+  {
+    "_id": "63c6ab94e4814f1469e063ef",
+    "age": 98,
+    "name": "Joseph Doyle",
+    "address": "855 Boerum Street, Toftrees, Nevada, 6595"
+  },
+  {
+    "_id": "63c6ab94a2df12abcd3a3eec",
+    "age": 23,
+    "name": "Shelly Phelps",
+    "address": "354 Coles Street, Brantleyville, Ohio, 1348"
+  },
+  {
+    "_id": "63c6ab94c3ec6674373e51b1",
+    "age": 49,
+    "name": "Cross Gross",
+    "address": "721 Elton Street, Oberlin, Maryland, 6260"
+  },
+  {
+    "_id": "63c6ab946f6f89704b318132",
+    "age": 86,
+    "name": "Nikki Sloan",
+    "address": "468 Gain Court, Davenport, Oklahoma, 6737"
+  },
+  {
+    "_id": "63c6ab9426a9b2dd22dfca27",
+    "age": 19,
+    "name": "Cherry Puckett",
+    "address": "392 Hall Street, Naomi, Texas, 1193"
+  },
+  {
+    "_id": "63c6ab941e1536512c73b75e",
+    "age": 30,
+    "name": "Julie Delacruz",
+    "address": "454 Kaufman Place, Elliston, South Dakota, 9569"
+  },
+  {
+    "_id": "63c6ab94f99bbd84926de93f",
+    "age": 37,
+    "name": "Stokes Arnold",
+    "address": "927 Linden Boulevard, Winfred, Wisconsin, 9404"
+  },
+  {
+    "_id": "63c6ab941100189f4e6632d7",
+    "age": 50,
+    "name": "Blankenship Salinas",
+    "address": "280 Moore Street, Crucible, Delaware, 3843"
+  },
+  {
+    "_id": "63c6ab94a5a08b62b1ef67bf",
+    "age": 66,
+    "name": "Weiss Cervantes",
+    "address": "117 Lott Street, Biddle, Tennessee, 8092"
+  },
+  {
+    "_id": "63c6ab94687fb82fcd06593b",
+    "age": 52,
+    "name": "Dickerson Quinn",
+    "address": "445 Bank Street, Thermal, Hawaii, 3689"
+  },
+  {
+    "_id": "63c6ab943c3a7fe36423969a",
+    "age": 22,
+    "name": "Snyder Goff",
+    "address": "176 Whitwell Place, Avalon, Wyoming, 1568"
+  },
+  {
+    "_id": "63c6ab942e1078cdcb81c748",
+    "age": 86,
+    "name": "Sheryl Gibson",
+    "address": "389 Ebony Court, Wakarusa, Minnesota, 6079"
+  },
+  {
+    "_id": "63c6ab9491ef9bf492ab3710",
+    "age": 34,
+    "name": "Vincent Cote",
+    "address": "411 Harden Street, Yettem, Louisiana, 2676"
+  },
+  {
+    "_id": "63c6ab94c94a3e13085a6c84",
+    "age": 61,
+    "name": "Nelda Saunders",
+    "address": "407 Herzl Street, Sims, Federated States Of Micronesia, 2318"
+  },
+  {
+    "_id": "63c6ab9446bfec44a8afa5cb",
+    "age": 76,
+    "name": "Christian Livingston",
+    "address": "663 Conselyea Street, Holcombe, Idaho, 3079"
+  },
+  {
+    "_id": "63c6ab944cfb14949c7d4227",
+    "age": 27,
+    "name": "Schneider Preston",
+    "address": "410 Ocean Court, National, Michigan, 5197"
+  },
+  {
+    "_id": "63c6ab948db5fa238a2b61c8",
+    "age": 41,
+    "name": "Dionne Sykes",
+    "address": "265 Nassau Avenue, Fostoria, Georgia, 889"
+  },
+  {
+    "_id": "63c6ab9466006a15151479cb",
+    "age": 11,
+    "name": "Hilda Austin",
+    "address": "448 Colby Court, Kent, Kansas, 8231"
+  },
+  {
+    "_id": "63c6ab9484391554b3717122",
+    "age": 40,
+    "name": "Leanna Townsend",
+    "address": "622 Arlington Place, Hardyville, Pennsylvania, 7970"
+  },
+  {
+    "_id": "63c6ab945f009f01b96b09ba",
+    "age": 33,
+    "name": "Polly Franks",
+    "address": "948 Troutman Street, Detroit, Montana, 561"
+  },
+  {
+    "_id": "63c6ab94ee5d50e40fea6cc1",
+    "age": 10,
+    "name": "Franks Mcdonald",
+    "address": "750 Lefferts Avenue, Tuskahoma, Maine, 684"
+  },
+  {
+    "_id": "63c6ab94993847fd368e6f6d",
+    "age": 34,
+    "name": "Dodson Perkins",
+    "address": "999 Guider Avenue, Spokane, California, 4214"
+  },
+  {
+    "_id": "63c6ab94ef7f41b0372c6260",
+    "age": 49,
+    "name": "Hudson Joyce",
+    "address": "666 Plaza Street, Ogema, Alabama, 5324"
+  },
+  {
+    "_id": "63c6ab94bc8f97cca003a9d3",
+    "age": 37,
+    "name": "Byrd Stevenson",
+    "address": "767 Lamont Court, Dunlo, Virgin Islands, 8932"
+  }
+]
+
+
+
+let tbody=document.getElementById("tbody");
+let html="";
+
+for(let i=0;i<data.length;i++){
+    html=html+`<tr>
+        <td>${data[i]._id}</td>
+      <td>${data[i].name}</td>
+      <td>${data[i].age}</td>
+      <td>${data[i].address}</td>
+    </tr>`
+
+}
+
+
+
+tbody.innerHTML=html;
+
+// You have to use document.createElement
+
+    </script>
+    
+</body>
+</html>
