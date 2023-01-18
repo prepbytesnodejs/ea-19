@@ -146,3 +146,18 @@ function foo(){
   }
   
   foo();
+
+
+
+  // Example of hoisting only applies to functional scopes
+
+  function foo(){
+    console.log(c);
+  
+  if(true){
+    console.log(c);
+    var c=9;
+  }
+    
+  }
+  foo()
