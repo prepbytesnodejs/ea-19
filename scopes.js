@@ -159,3 +159,60 @@ undefined
 
 // variables declared with var gets attached to window object 
 ///,but variables declared with let and const don't
+
+
+let  c=9;
+
+
+function gh(){
+  let c="data is great";
+  function foo(){
+ //let c;
+  //let c=99;
+//  console.log(c);
+   
+
+  if(true){
+   // let c=78;
+    console.log(c);  //here
+  }
+//console.log(c);  // here
+  //let c="hello there"
+//var  c="hello there";
+}
+foo();
+  
+}
+gh();
+
+//console.log(c);
+
+
+
+let  c=9;
+
+
+function gh(){
+
+  // shadowing is h
+  let  c="data is great";  // shadowing the variable c defined in top of the file above 
+  function foo(){
+ //let c;
+  //let c=99;
+//  console.log(c);
+   
+
+  if(true){
+   // let c=78;
+    console.log(c);  //here
+  }
+//console.log(c);  // here
+//  let c="hello there"
+//var  c="hello there";
+}
+foo();
+  
+}
+gh();
+
+//console.log(c);
