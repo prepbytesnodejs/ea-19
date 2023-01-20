@@ -216,3 +216,7 @@ foo();
 gh();
 
 //console.log(c);
+
+//document.querySelector(".classname");
+//document.querySelector("#id");
+//document.querySelector("h1");
